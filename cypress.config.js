@@ -2,7 +2,7 @@ require("dotenv").config();
 const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 e2e: {
-    supportFile: false,
+    supportFile: "cypress/support/e2e.js",
 baseUrl: process.env.CYPRESS_BASE_URL || "http://localhost:3000",
 specPattern: "cypress/e2e/**/*.cy.js",
 reporter: "cypress-mochawesome-reporter",
